@@ -11,7 +11,7 @@ jobs:
 
   changes:
     runs-on: ubuntu-latest
-     outputs:
+    outputs:
       src: ${{ steps.filter.outputs.src }}
     steps:
       - name: Checkout code
