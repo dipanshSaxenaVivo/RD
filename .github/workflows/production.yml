@@ -8,10 +8,15 @@ on:
     branches:
     - master
 jobs:
+
+  # changes:
+  #   runs-on: ubuntu-latest
+
+
   build:
 
     runs-on: ubuntu-latest
-    # if: ${{ github.event_name == 'push' && steps.filter.outputs.paths == 'src' }}
+    if: steps.Filter.outputs.paths == 'true'
 
     strategy:
       matrix:
