@@ -9,7 +9,7 @@ let people = [
   { name: "Mike", age: "21", location: "Chicago", role: "Teacher" },
 ];
 
-console.log(sortAndFilter(['location', 'asc'], ['name', 'asc'], 'age', '22'));
+// console.log(sortAndFilter(['location', 'asc'], ['name', 'asc'], 'age', '22'));
 /* output:
 Error: the array does not exist
 */
