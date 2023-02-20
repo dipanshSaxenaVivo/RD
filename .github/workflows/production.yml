@@ -9,14 +9,27 @@ on:
     - master
 jobs:
 
-  # changes:
-  #   runs-on: ubuntu-latest
+  changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Filter by paths
+        id: filter
+        uses: dorny/paths-filter@v2
+        with:
+          filters: |
+            src:
+              - 'src/**'
 
 
   build:
 
+    needs: changes
+    if: echo needs.changes ${{ needs.changes.outputs.paths == 'true' }}
+
     runs-on: ubuntu-latest
-    if: steps.Filter.outputs.paths == 'true'
+    # if: steps.Filter.outputs.paths == 'true'
 
     strategy:
       matrix:
@@ -25,13 +38,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Filter by paths
-      id: filter
-      uses: dorny/paths-filter@v2
-      with:
-        filters: |
-          src:
-            - 'src/**'
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
