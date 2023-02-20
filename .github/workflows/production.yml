@@ -46,7 +46,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: npm ci runs
-      run: echo ${{steps}} npm ci
+      run: npm ci
     - name: instaling dependcies
       run: npm i --force
     - name: bulding your app
