@@ -9,11 +9,11 @@ let people = [
   { name: "Mike", age: "21", location: "Chicago", role: "Teacher" },
 ];
 
-// // console.log(sortAndFilter(['location', 'asc'], ['name', 'asc'], 'age', '22'));
-// /* output:
-// Error: the array does not exist
-// */
+// console.log(sortAndFilter(['location', 'asc'], ['name', 'asc'], 'age', '22'));
+/* output:
+Error: the array does not exist
+*/
 
-// console.log(palindromes(["Madam", "Loot", "Was it a cat I saw?", "Poor Dan is in a droop", "Anna", "Nope" ]))
-// // Each array element in the array consists of at least one alphanumeric character (No strings
-// //consisting of only non-alphanumeric characters)
+console.log(palindromes(["Madam", "Loot", "Was it a cat I saw?", "Poor Dan is in a droop", "Anna", "Nope" ]))
+// Each array element in the array consists of at least one alphanumeric character (No strings
+//consisting of only non-alphanumeric characters)
