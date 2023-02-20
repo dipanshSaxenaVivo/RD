@@ -22,7 +22,7 @@ jobs:
         with:
           filters: |
             src:
-              - 'src/vivo.web.admin/**'
+              - 'Vivo.Iot.Web.Admin/**'
 
 
   build:
