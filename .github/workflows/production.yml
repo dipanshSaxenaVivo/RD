@@ -11,7 +11,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    echo: ${{ github.event_name == 'push' && steps }}
+    # if: ${{ github.event_name == 'push' && steps.filter.outputs.paths == 'src' }}
 
     strategy:
       matrix:
@@ -32,7 +32,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: npm ci runs
-      run: npm ci
+      run: echo ${{steps,github}} npm ci
     - name: instaling dependcies
       run: npm i --force
     - name: bulding your app
