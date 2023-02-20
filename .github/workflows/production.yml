@@ -26,7 +26,7 @@ jobs:
   build:
 
     needs: changes
-    if: ${{ needs.changes.outputs.paths == ['src'] }}
+    if: ${{ needs.changes.outputs.paths[0] == 'src' }}
 
     runs-on: ubuntu-latest
     # if: steps.Filter.outputs.paths == 'true'
