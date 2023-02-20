@@ -10,7 +10,7 @@ interface IApp {
 const App:React.FC<IApp> = ()=>{
   return (
     <div className="App">
-      {/* <p>HELLO</p> */}
+      <p>HELLO</p>
       <p>another commit</p>
       <WithMaterialUI/>
     </div>
